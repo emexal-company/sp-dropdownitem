@@ -29,25 +29,6 @@ export class DropdownItem extends Base {
     @property({ type: Boolean }) public disabled: boolean = false;
     @property({ type: Boolean }) public thumbnails: boolean = false;
 
-    protected firstUpdated() {
-
-    }
-
-    protected handleClick(e: any) {
-        this.selected = !this.selected;
-        let changedEvent = new CustomEvent('dropchanged', {
-            detail: {
-                text: this.text,
-                selected: this.selected
-            },
-            bubbles: true,
-            composed: true
-        });
-        this.dispatchEvent(changedEvent);
-    }
-
-    protected handleDisabledClick(e: any) { }
-
     protected render() {
         if (this.separator) {
             return separatorTemplate.call(this);

@@ -16,10 +16,9 @@ import { html } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { DropdownItem } from './dropdownitem.component';
 
+import '@spectrum/sp-icon';
 import '@spectrum/sp-label';
 import '@spectrum/sp-tooltip';
-import '@spectrum/sp-icon';
-
 
 export function separatorTemplate(this: DropdownItem) {
     return html`
@@ -44,8 +43,7 @@ export function elementTemplate(this: DropdownItem) {
         id="${this.id}"
         role="${this.role}"
         ?aria-selected="${this.selected}"
-        tabindex="0"
-        @click='${(this.disabled) ? this.handleDisabledClick : this.handleClick}'>
+        tabindex="0">
         <slot></slot>
         ${selectThumbnails}
         <span class="spectrum-Menu-itemLabel" >${this.text}</span>
