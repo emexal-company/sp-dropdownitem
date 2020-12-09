@@ -54,11 +54,11 @@ __decorate([
     __metadata("design:type", Boolean)
 ], DropdownItem.prototype, "separator", void 0);
 __decorate([
-    property({ type: Boolean }),
+    property({ type: Boolean, reflect: true }),
     __metadata("design:type", Boolean)
 ], DropdownItem.prototype, "selected", void 0);
 __decorate([
-    property({ type: Boolean }),
+    property({ type: Boolean, reflect: true }),
     __metadata("design:type", Boolean)
 ], DropdownItem.prototype, "disabled", void 0);
 __decorate([

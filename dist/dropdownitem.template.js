@@ -12,7 +12,6 @@
     limitations under the License.
 */
 import { html } from 'lit-element';
-import { classMap } from 'lit-html/directives/class-map.js';
 import '@spectrum/sp-icon';
 import '@spectrum/sp-label';
 import '@spectrum/sp-tooltip';
@@ -22,10 +21,6 @@ export function separatorTemplate() {
     `;
 }
 export function elementTemplate() {
-    const classes = {
-        'is-selected': this.selected,
-        'is-disabled': this.disabled
-    };
     const selectThumbnails = [];
     if (this.thumbnails) {
         selectThumbnails.push(html `
@@ -33,16 +28,10 @@ export function elementTemplate() {
         `);
     }
     return html `
-    <li class="spectrum-Menu-item ${classMap(classes)}"
-        id="${this.id}"
-        role="${this.role}"
-        ?aria-selected="${this.selected}"
-        tabindex="0">
         <slot></slot>
         ${selectThumbnails}
         <span class="spectrum-Menu-itemLabel" >${this.text}</span>
         ${(this.selected) ? html `<sp-icon name="CheckmarkMedium" class="spectrum-Menu-checkmark spectrum-Menu-itemIcon"></sp-icon>` : ''}
-    </li>
     `;
 }
 //# sourceMappingURL=dropdownitem.template.js.map

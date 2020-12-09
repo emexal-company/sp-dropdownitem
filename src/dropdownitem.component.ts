@@ -25,8 +25,8 @@ export class DropdownItem extends Base {
     @property({ type: String }) public text: string = '';
     @property({ type: String }) public id: string = '';
     @property({ type: Boolean }) public separator: boolean = false;
-    @property({ type: Boolean }) public selected: boolean = false;
-    @property({ type: Boolean }) public disabled: boolean = false;
+    @property({ type: Boolean, reflect: true }) public selected: boolean = false;
+    @property({ type: Boolean, reflect: true }) public disabled: boolean = false;
     @property({ type: Boolean }) public thumbnails: boolean = false;
 
     protected render() {
