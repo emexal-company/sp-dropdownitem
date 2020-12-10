@@ -34,9 +34,8 @@ export function elementTemplate(this: DropdownItem) {
     }
 
     return html`
-        <slot></slot>
         ${selectThumbnails}
-        <span class="spectrum-Menu-itemLabel" >${this.text}</span>
+        <span class="spectrum-Menu-itemLabel" ?selected="${this.selected}">${this.text}</span>
         ${(this.selected) ? html`<sp-icon name="CheckmarkMedium" class="spectrum-Menu-checkmark spectrum-Menu-itemIcon"></sp-icon>` : ''}
     `;
 }

@@ -18,7 +18,7 @@
 }
 
 /* to add color to selected text*/
-:host([selected]) .spectrum-Menu-itemLabel {
+.spectrum-Menu-itemLabel[selected] {
     color: rgb(13, 102, 208);
 }
 
@@ -76,10 +76,6 @@
     padding-right: calc(var(--spectrum-selectlist-option-padding, var(--spectrum-global-dimension-static-size-150)) - var(--spectrum-popover-border-size, var(--spectrum-alias-border-size-thin)));
 }
 
-:host([selected]) .spectrum-Menu-checkmark {
-    display: block;
-}
-
 .spectrum-Icon,
 .spectrum-Menu-itemIcon {
     -ms-flex-negative: 0;
@@ -107,7 +103,7 @@
 }
 
 .spectrum-Menu-checkmark {
-    display: none;
+    display: block;
     -ms-flex-item-align: start;
     align-self: flex-start;
 }
@@ -144,7 +140,7 @@
     color: var(--spectrum-selectlist-option-text-color-selected, var(--spectrum-alias-text-color));
 }
 
-:host([selected]) .spectrum-Menu-checkmark {
+.spectrum-Menu-checkmark {
     color: var(--spectrum-selectlist-option-icon-color-selected, var(--spectrum-alias-icon-color-selected));
 }
 
