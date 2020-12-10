@@ -18,7 +18,7 @@
 }
 
 /* to add color to selected text*/
-.spectrum-Menu-itemLabel[selected] {
+.spectrum-Menu-itemLabel {
     color: rgb(13, 102, 208);
 }
 
@@ -68,6 +68,14 @@
     text-decoration: none;
 }
 
+:host(:not([selected])) {
+    line-height: 1.3;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
 :host(:focus) {
     outline: none;
 }
@@ -82,13 +90,6 @@
     flex-shrink: 0;
     -ms-flex-item-align: start;
     align-self: flex-start;
-}
-
-.spectrum-Icon+.spectrum-Menu-itemLabel,
-.spectrum-Menu-itemIcon+.spectrum-Menu-itemLabel {
-    margin-left: var(--spectrum-selectlist-thumbnail-image-padding-x, var(--spectrum-global-dimension-size-100));
-
-    width: calc(100% - var(--spectrum-icon-checkmark-medium-width) - var(--spectrum-selectlist-option-icon-padding-x, var(--spectrum-global-dimension-size-150)) - var(--spectrum-selectlist-thumbnail-image-padding-x, var(--spectrum-global-dimension-size-100)) - var(--spectrum-alias-workflow-icon-size, var(--spectrum-global-dimension-size-225)));
 }
 
 .spectrum-Menu-itemLabel {

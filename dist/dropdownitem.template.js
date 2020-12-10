@@ -28,9 +28,11 @@ export function elementTemplate() {
         `);
     }
     return html `
-        ${selectThumbnails}
-        <span class="spectrum-Menu-itemLabel" ?selected="${this.selected}">${this.text}</span>
-        ${(this.selected) ? html `<sp-icon name="CheckmarkMedium" class="spectrum-Menu-checkmark spectrum-Menu-itemIcon"></sp-icon>` : ''}
+        ${(this.selected) ?
+        html `
+                <span class="spectrum-Menu-itemLabel">${this.text}</span>
+                <sp-icon name="CheckmarkMedium" class="spectrum-Menu-checkmark spectrum-Menu-itemIcon"></sp-icon>` :
+        html `${this.text}`}
     `;
 }
 //# sourceMappingURL=dropdownitem.template.js.map
